@@ -14,6 +14,8 @@
 		2B0F0CBA1BE2818A00AAB26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0F0CB81BE2818A00AAB26A /* LaunchScreen.storyboard */; };
 		2B0F0CC51BE2818A00AAB26A /* deltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0CC41BE2818A00AAB26A /* deltaTests.swift */; };
 		2B0F0CD01BE2818A00AAB26A /* deltaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0CCF1BE2818A00AAB26A /* deltaUITests.swift */; };
+		2B0F0CDE1BE282AF00AAB26A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0F0CDD1BE282AF00AAB26A /* CoreLocation.framework */; };
+		2B6C58161C08146800C9CFAC /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C58151C08146800C9CFAC /* CompassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2B0F0CCB1BE2818A00AAB26A /* deltaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deltaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0F0CCF1BE2818A00AAB26A /* deltaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deltaUITests.swift; sourceTree = "<group>"; };
 		2B0F0CD11BE2818A00AAB26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B0F0CDD1BE282AF00AAB26A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2B6C58151C08146800C9CFAC /* CompassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0F0CDE1BE282AF00AAB26A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		2B0F0CA31BE2818A00AAB26A = {
 			isa = PBXGroup;
 			children = (
+				2B0F0CDD1BE282AF00AAB26A /* CoreLocation.framework */,
 				2B0F0CAE1BE2818A00AAB26A /* delta */,
 				2B0F0CC31BE2818A00AAB26A /* deltaTests */,
 				2B0F0CCE1BE2818A00AAB26A /* deltaUITests */,
@@ -99,6 +105,7 @@
 			children = (
 				2B0F0CAF1BE2818A00AAB26A /* AppDelegate.swift */,
 				2B0F0CB11BE2818A00AAB26A /* ViewController.swift */,
+				2B6C58151C08146800C9CFAC /* CompassView.swift */,
 				2B0F0CB31BE2818A00AAB26A /* Main.storyboard */,
 				2B0F0CB61BE2818A00AAB26A /* Assets.xcassets */,
 				2B0F0CB81BE2818A00AAB26A /* LaunchScreen.storyboard */,
@@ -193,6 +200,7 @@
 				TargetAttributes = {
 					2B0F0CAB1BE2818A00AAB26A = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 868Z294UXB;
 					};
 					2B0F0CBF1BE2818A00AAB26A = {
 						CreatedOnToolsVersion = 7.1;
@@ -256,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6C58161C08146800C9CFAC /* CompassView.swift in Sources */,
 				2B0F0CB21BE2818A00AAB26A /* ViewController.swift in Sources */,
 				2B0F0CB01BE2818A00AAB26A /* AppDelegate.swift in Sources */,
 			);
@@ -399,10 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = delta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samclearman.delta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = delta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samclearman.delta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +499,7 @@
 				2B0F0CD61BE2818A00AAB26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B0F0CD71BE2818A00AAB26A /* Build configuration list for PBXNativeTarget "deltaTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +508,7 @@
 				2B0F0CD91BE2818A00AAB26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B0F0CDA1BE2818A00AAB26A /* Build configuration list for PBXNativeTarget "deltaUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				2B0F0CDC1BE2818A00AAB26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
