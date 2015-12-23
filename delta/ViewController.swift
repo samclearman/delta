@@ -33,8 +33,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func update() {
-        speedLabel.text = String(format: "%.1f mph", self.speed)
-        courseLabel.text = String(format: "%.0fº", self.course)
+        if self.speed < 0 {
+            speedLabel.text = "-- mph"
+        } else {
+            speedLabel.text = String(format: "%.1f mph", self.speed)
+        }
+        if self.course < 0 {
+            courseLabel.text = "--º"
+        } else {
+            courseLabel.text = String(format: "%.0fº", self.course)
+        }
         compassView.heading = self.heading
         compassView.course = self.course
         compassView.setNeedsDisplay()
